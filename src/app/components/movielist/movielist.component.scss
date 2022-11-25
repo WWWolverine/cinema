@@ -1,0 +1,170 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-family: "Sofia", sans-serif;
+  transition-duration: 500ms;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+button {
+  align-self: flex-start;
+  color: rgba(255, 255, 255, 0.795);
+  margin-left: 28px;
+  padding: 28px;
+  background-color: rgba(128, 128, 128, 0.425);
+
+  border-radius: 0 0 30px 30px;
+  transition-duration: 500ms;
+}
+
+button:hover {
+  color: red;
+  background-color: black;
+}
+h1:hover {
+  color: red;
+}
+
+.img {
+  width: 100%;
+  height: 700px;
+  animation: slide 40s linear infinite;
+
+  display: flex;
+  background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+  background-size: 1320px 700px;
+  background: no-repeat;
+}
+
+@keyframes slide {
+  0% {
+    background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+    background-size: 1320px 700px;
+  }
+  15% {
+    background: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/72aa3ecbe40ae875de23982675bab5f1b2cc82a087610d2468bcdcc30a664152._RI_.jpg);
+    background-size: 1320px 700px;
+  }
+  45% {
+    background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+    background-size: 1320px 700px;
+  }
+  65% {
+    background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+    background-size: 1320px 700px;
+  }
+
+  80% {
+    background: url(https://wallpaperaccess.com/full/4378607.jpg);
+    background-size: 1320px 700px;
+  }
+  100% {
+    background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+    background-size: 1320px 700px;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .img {
+    width: 800px;
+    height: 424px;
+    background-size: 800px 424px;
+  }
+  @keyframes slide {
+    0% {
+      background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+      background-size: 800px 424px;
+    }
+    15% {
+      background: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/72aa3ecbe40ae875de23982675bab5f1b2cc82a087610d2468bcdcc30a664152._RI_.jpg);
+      background-size: 800px 424px;
+    }
+    45% {
+      background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+      background-size: 800px 424px;
+    }
+    65% {
+      background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+      background-size: 800px 424px;
+    }
+    80% {
+      background: url(https://wallpaperaccess.com/full/4378607.jpg);
+      background-size: 800px 424px;
+    }
+    100% {
+      background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+      background-size: 800px 424px;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .img {
+    width: 500px;
+    height: 265px;
+    background-size: 500px 265px;
+  }
+  @keyframes slide {
+    0% {
+      background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+      background-size: 500px 265px;
+    }
+    15% {
+      background: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/72aa3ecbe40ae875de23982675bab5f1b2cc82a087610d2468bcdcc30a664152._RI_.jpg);
+      background-size: 500px 265px;
+    }
+    45% {
+      background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+      background-size: 500px 265px;
+    }
+    65% {
+      background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+      background-size: 500px 265px;
+    }
+    80% {
+      background: url(https://wallpaperaccess.com/full/4378607.jpg);
+      background-size: 500px 265px;
+    }
+    100% {
+      background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+      background-size: 500px 265px;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .img {
+    width: 300px;
+    height: 159px;
+    background-size: 300px 159px;
+  }
+  @keyframes slide {
+    0% {
+      background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+      background-size: 300px 159px;
+    }
+    15% {
+      background: url(https://images-na.ssl-images-amazon.com/images/S/pv-target-images/72aa3ecbe40ae875de23982675bab5f1b2cc82a087610d2468bcdcc30a664152._RI_.jpg);
+      background-size: 300px 159px;
+    }
+    45% {
+      background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+      background-size: 300px 159px;
+    }
+    65% {
+      background: url(https://images.alphacoders.com/646/thumb-1920-646578.jpg);
+      background-size: 300px 159px;
+    }
+    80% {
+      background: url(https://wallpaperaccess.com/full/4378607.jpg);
+      background-size: 300px 159px;
+    }
+    100% {
+      background: url(https://static.hbo.com/2022-06/house-of-the-dragon-ka-1920.jpg);
+      background-size: 300px 159px;
+    }
+  }
+}

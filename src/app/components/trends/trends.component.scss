@@ -1,0 +1,309 @@
+* {
+  font-family: "Trirong", serif;
+  box-sizing: border-box;
+}
+img {
+  width: 200px;
+  height: 300px;
+}
+button {
+  background: none;
+  border: none;
+}
+.popular {
+  height: 100%;
+
+  margin: 40px;
+}
+.list {
+  margin: 36px;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+}
+p {
+  font-family: "Sofia", sans-serif;
+  font-size: 20px;
+}
+.name {
+  align-self: center;
+  flex: 2;
+  width: 100px;
+  color: white;
+}
+hr {
+  color: black;
+  height: 5px;
+  width: 100%;
+}
+.description {
+  align-self: flex-end;
+  flex: 3;
+}
+.logo {
+  flex: 1;
+}
+@media only screen and (max-width: 1320px) {
+}
+.paginator {
+  color: white;
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    black 33%,
+
+    #000000 33%
+  );
+  padding-bottom: 150px;
+}
+
+::ng-deep {
+  .ngx-pagination li {
+    background-color: rgb(128, 128, 128);
+    font-size: 28px;
+  }
+}
+.ngx-pagination .current {
+  color: white;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background: red;
+  font-size: 36px;
+}
+.title {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+button {
+  margin-left: 10px;
+  flex: 1;
+  color: red;
+}
+input {
+  flex: 4;
+  height: 75px;
+  background-color: rgb(128, 128, 128);
+  color: white;
+  font-size: 36px;
+  font-family: "Sofia", sans-serif;
+  border: none;
+}
+::placeholder {
+  color: red;
+}
+h2 {
+  font-family: "Sofia", sans-serif;
+  font-size: 36px;
+  background-color: rgb(128, 128, 128);
+  height: 100%;
+  width: 100%;
+}
+h2:hover {
+  color: rgb(255, 255, 255);
+  background: red;
+}
+@media only screen and (max-width: 800px) {
+  input {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+    flex: 1;
+  }
+  button {
+    margin: 0px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  img {
+    width: 150px;
+    height: 200px;
+  }
+}
+.top-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.topimg {
+  margin: 30px;
+}
+@media only screen and (max-width: 1320px) {
+  .topimg {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .topimg {
+    width: 100px;
+    height: 200px;
+  }
+}
+
+.top {
+  padding: 0%;
+  align-self: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.toprating {
+  margin-left: 30px;
+  bottom: 100px;
+  position: relative;
+}
+.topname {
+  margin-left: 30px;
+  bottom: 100px;
+  position: relative;
+  color: white;
+}
+.header {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0) 0%,
+    black 33%,
+    black 33%,
+    #000000 33%
+  );
+}
+@media only screen and (max-width: 500px) {
+  .header {
+    flex-direction: row;
+  }
+}
+h1 {
+  font-family: "Trirong", serif;
+  color: white;
+}
+.photo {
+  padding: 0%;
+
+  z-index: 2;
+}
+
+.footer {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom {
+  width: 100%;
+  height: 700px;
+
+  background: no-repeat;
+  background: url(https://wallpapercave.com/wp/wp8420063.jpg);
+  background-size: 1320px 700px;
+}
+
+.logoimg {
+  transition-duration: 1s;
+}
+
+.logoimg:hover {
+  border: white solid 5px;
+}
+.cinema {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.window {
+  margin: 36px;
+}
+.footercinema {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(
+    360deg,
+    black 25%,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 75%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player {
+  align-self: center;
+  display: flex;
+}
+.headercinema {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(
+    180deg,
+    black 25%,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 75%
+  );
+}
+.close {
+  align-self: center;
+  font-size: 40px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: row;
+}
+.logo1 {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.column {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.title1 {
+  flex: 2;
+  align-self: flex-end;
+  color: white;
+}
+.description1 {
+  flex: 2;
+  align-self: flex-end;
+}
+iframe {
+  width: 100%;
+  height: 500px;
+}
+vg-player {
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+video {
+  width: 100%;
+  height: 10%;
+}
+@media only screen and (max-width: 1320px) {
+  video {
+  }
+}

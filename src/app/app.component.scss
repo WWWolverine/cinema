@@ -1,0 +1,21 @@
+* {
+  color: rgb(238, 6, 6);
+}
+
+.app {
+  position: static;
+  display: block;
+  background-attachment: fixed;
+  background-image: url(https://media.vanityfair.com/photos/62ab8cd171563c90554455e7/master/pass/heat-coffee-scene.jpg);
+}
+
+.display {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+.main {
+  width: 1320px;
+
+  background-color: rgb(39, 39, 39);
+}

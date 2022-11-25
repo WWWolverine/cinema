@@ -1,0 +1,137 @@
+<div class="cinema" *ngIf="openMovie">
+  <ng-container class="window" *ngFor="let movie of films; let i = index">
+    <div class="headercinema">
+      <button class="close" (click)="removeItem(movie)">
+        Click to Home page
+      </button>
+      <div class="column">
+        <div class="logo1">
+          <img class="logoimg" src="{{ movie.image }}" alt="" />
+        </div>
+        <div class="description1">
+          <div class="name">
+            <h1>{{ movie.name }}({{ movie.year }})</h1>
+
+            <p
+              style="
+                background-color: yellow;
+                color: black;
+                width: 100px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+              "
+            >
+              IMBD <span>{{ movie.rating }}</span>
+            </p>
+          </div>
+
+          <p>{{ movie.description }}</p>
+        </div>
+        <div class="title1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
+          ipsum alias, doloribus quam odit eius tempore porro sunt dicta error
+          non cupiditate eos eaque recusandae sed laudantium, autem quibusdam
+          ullam aliquid aliquam nihil repellat. Veritatis dolores ipsa velit
+          quasi esse? Voluptatem, ex, fugiat tenetur suscipit eligendi dicta,
+          quia aperiam consequatur necessitatibus enim nobis obcaecati illum?
+          Magnam ipsum similique dolores dicta?
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="footercinema">
+      <div class="player">
+        <vg-player>
+          <video
+            [vgMedia]="$any(media)"
+            #media
+            id="singleVideo"
+            preload="auto"
+            controls
+          >
+            <source src="{{ movie.player }}" type="video/mp4" />
+          </video>
+        </vg-player>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="homepage" *ngIf="!openMovie">
+  <div class="header">
+    <h1>Top movies</h1>
+    <div class="top-list">
+      <div class="top" *ngFor="let top of bestMovies; let i = index">
+        <a class="topbtn" (click)="addtocart(top)">
+          <div class="photo">
+            <a>
+              <img class="topimg" *ngIf="i < 5" src="{{ top.image }}" alt="" />
+            </a>
+          </div>
+        </a>
+        <p class="toprating" *ngIf="i < 5">{{ top.rating }}</p>
+        <p class="topname" *ngIf="i < 5">{{ top.name }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="searchTerm"
+      (keyup)="search($event)"
+      placeholder="search movie"
+    />
+
+    <button (click)="filter('serial')"><h2>serial</h2></button>
+    <button (click)="filter('movie')"><h2>movie</h2></button>
+    <button (click)="filter('')"><h2>Rating</h2></button>
+  </div>
+  <div class="popular">
+    <ng-container
+      class="list"
+      *ngFor="
+        let movie of filterCategory
+          | filter: searchKey:'title'
+          | paginate: { itemsPerPage: itemsPage, currentPage: p };
+        let i = index
+      "
+    >
+      <div class="row">
+        <button (click)="addtocart(movie)">
+          <div class="logo">
+            <img class="logoimg" src="{{ movie.image }}" alt="img" />
+          </div>
+        </button>
+        <button (click)="addtocart(movie)">
+          <div class="name">
+            <h1>{{ movie.name }}({{ movie.year }})</h1>
+
+            <p
+              style="
+                background-color: yellow;
+                color: black;
+                width: 100px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+              "
+            >
+              IMBD <span>{{ movie.rating }}</span>
+            </p>
+          </div>
+        </button>
+        <div class="description">
+          <p>{{ movie.description }}</p>
+        </div>
+      </div>
+
+      <hr />
+    </ng-container>
+  </div>
+  <div class="paginator">
+    <pagination-controls
+      class="my-pagination"
+      (pageChange)="p = $event"
+    ></pagination-controls>
+  </div>
+</div>
+<div class="footer">
+  <div class="bottom"></div>
+</div>
